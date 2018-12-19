@@ -31,7 +31,7 @@ pipeline:
     from: plex-nofonts-dev
     repo: spritsail/plex-media-server
     tags:
-      - '%label io.spritsail.version.plex | %prefix nofonts | %auto'
+      - '%label io.spritsail.version.plex | %prefix nofonts | %remsuf [0-9a-f]{7}$ | %auto 2'
 
   notify:
     image: spritsail/notify
